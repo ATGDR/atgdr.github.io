@@ -213,7 +213,7 @@ img {
     height: 90px;
     object-fit: contain;
     border-radius: 0.75rem;
-    background: #f8f8f8;
+    background: #f8f8f800;
     flex-shrink: 0;
 }
 .experience-details {
