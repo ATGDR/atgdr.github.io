@@ -1,0 +1,527 @@
+/* General Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Roboto, sans-serif;
+    text-align: center;
+}
+
+img {
+    pointer-events: none;
+}
+
+/* Navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.topnav a.active,
+.active1 {
+    background-color: #04AA6D;
+    color: white;
+}
+.right {
+    text-align: right;
+    float: right;
+}
+
+/* Hero Sections */
+.hero-image1, .hero-image2 {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-image1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/QC.png');
+}
+.hero-image2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/AtVST-ECS.jpg');
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+}
+.hero-text button:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* Main Heading */
+.main-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+@media (min-width: 640px) {
+    .main-heading {
+        font-size: 2.25rem;
+    }
+}
+@media (min-width: 768px) {
+    .main-heading {
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* Accordion */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+.accordion:hover,
+.active2 {
+    background-color: #ccc;
+}
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* Section Titles and Padding */
+.section-title {
+    color: #eee;
+    font-size: 2rem;
+    margin: 1.5rem 0 1rem 0;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.section-padding {
+    padding: 6px;
+}
+
+/* Grid Layouts */
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grid-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+@media (min-width: 640px) {
+    .grid-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+.grid-item {
+    background-color: #fff;
+    padding: 5%;
+    border-radius: 0.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #4b5563;
+    font-weight: 600;
+    overflow: hidden;
+    position: relative;
+}
+.grid-item img {
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+    border-radius: 0.25rem;
+}
+
+/* Experience Cards */
+.experience-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px; /* Add a max-width for better layout on large screens */
+}
+.experience-card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column; /* Stack image above text */
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    transition: transform 0.2s;
+}
+.experience-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+.experience-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 0.75rem;
+    background: #f8f8f8;
+    flex-shrink: 0;
+}
+.experience-details {
+    text-align: center;
+}
+.experience-details h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    color: #374151;
+}
+.experience-details h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    color: #ca461a;
+}
+.experience-details p {
+    margin: 0;
+    color: #4b5563;
+    font-size: 0.98rem;
+}
+@media (max-width: 700px) {
+    .experience-cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+    .experience-card {
+        flex-direction: column;
+        align-items: center;
+        max-width: 95vw;
+        min-width: 0;
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+        gap: 1rem;
+    }
+    .experience-logo {
+        margin-bottom: 1rem;
+    }
+    .experience-details h2,
+    .experience-details h4,
+    .experience-details p {
+        text-align: center;
+    }
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    margin: 2rem auto 3rem auto;
+    max-width: 1100px;
+}
+
+.skill-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 180px;
+    height: 180px;
+    min-width: 180px;
+    min-height: 180px;
+    max-width: 180px;
+    max-height: 180px;
+    padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+    transition: transform 0.18s, box-shadow 0.18s;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+}
+.skill-card:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+}
+.skill-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 0.7rem;
+    flex-shrink: 0;
+}
+.skill-card span {
+    font-size: 1.1rem;
+    color: #374151;
+    font-weight: 500;
+    text-align: center;
+    word-break: break-word;
+    line-height: 1.2;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 1.5em;
+}
+
+/* Responsive: allow cards to shrink on small screens */
+@media (max-width: 700px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+        max-width: 98vw;
+    }
+    .skill-card {
+        width: 120px;
+        height: 120px;
+        min-width: 120px;
+        min-height: 120px;
+        max-width: 120px;
+        max-height: 120px;
+        padding: 0.5rem;
+    }
+    .skill-card img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Utility Classes */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive Gallery */
+div.gallery {
+    border: 1px solid #cccccc00;
+    display: flex;
+    justify-content: center;
+}
+div.gallery img {
+    width: 50%;
+    height: 250px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+/* Responsive Columns */
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+/* Miscellaneous */
+.row {
+    margin: 8px -16px;
+}
+.row,
+.row > .column {
+    padding: 8px;
+}
+.column {
+    float: left;
+    width: 50%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.content {
+    background-color: rgba(255, 255, 255, 0.603);
+    padding: 10px;
+    height: 500px;
+}
+
+/* Back to Top Button */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 99;
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background: rgba(202, 70, 26, 0.95);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    transition: background 0.2s, transform 0.2s, opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+}
+#myBtn.show {
+    opacity: 1;
+    pointer-events: auto;
+    display: block;
+}
+#myBtn:hover, #myBtn:focus {
+    background: #b33a0a;
+    transform: scale(1.08);
+    outline: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    text-decoration: none;
+    padding: 3px;
+    background-color: #333;
+    color: white;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    max-width: 100%;
+    margin: 24px auto;
+    background: #f8f8f8;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slideshow-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: opacity 0.4s;
+    background: #ffffff00;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 8px 16px;
+    margin-top: -22px;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background: rgba(255,255,255,0.7);
+    border: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
+}
+.dots {
+    text-align: center;
+    margin-top: 8px;
+}
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 3px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: #717171;
+}
+
+/* Experience Background */
+.experience-bg {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.100), rgba(255, 255, 255, 0)), url('assets/AtVST-ECS.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 350px 0; /* Increased from 40px to 80px for more height */
+}
+
+/* Hero Profile Image */
+.hero-profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/*07/06/2025 9:47 PM*/
