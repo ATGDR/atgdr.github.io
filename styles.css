@@ -54,7 +54,7 @@ img {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/QC.png');
 }
 .hero-image2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/AtVST-ECS.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/Makati.jpg');
 }
 .hero-text {
     text-align: center;
@@ -189,14 +189,14 @@ img {
     gap: 2rem;
     justify-content: center;
     margin: 0 auto;
-    max-width: 1200px; /* Add a max-width for better layout on large screens */
+    max-width: 1200px;
 }
 .experience-card {
     background: #fff;
     border-radius: 1rem;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     display: flex;
-    flex-direction: column; /* Stack image above text */
+    flex-direction: column;
     align-items: center;
     max-width: 500px;
     width: 100%;
@@ -400,6 +400,15 @@ div.gallery img {
 
 /* Back to Top Button */
 #myBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+}
+#myBtn {
     display: none;
     position: fixed;
     bottom: 32px;
@@ -506,11 +515,11 @@ footer {
 
 /* Experience Background */
 .experience-bg {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.100), rgba(255, 255, 255, 0)), url('assets/AtVST-ECS.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.350), rgba(0, 0, 0, 0.750)), url('assets/Makati.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 350px 0; /* Increased from 40px to 80px for more height */
+    padding: 350px 0;
 }
 
 /* Hero Profile Image */
@@ -523,5 +532,3 @@ footer {
     margin-bottom: 1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
-
-/*07/06/2025 9:47 PM*/

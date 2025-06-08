@@ -85,5 +85,3 @@ function plusSlides(project, n) {
 window.addEventListener('DOMContentLoaded', function() {
     projects.forEach(project => showSlides(project, 0));
 });
-
-// 07/06/2025 9:47 PM
